@@ -26,4 +26,12 @@ Output: [0,1]
 '''    
 
 def two_sum(nums, target):
-  pass
+    table = {}
+
+    for idx,i in enumerate(nums):
+      if i in table:
+        return table[i], idx
+      else:
+        table[target - i] = idx
+
+print(two_sum([3, 3], 6))

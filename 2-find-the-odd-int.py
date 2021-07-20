@@ -24,4 +24,16 @@ Output: 10
 '''    
 
 def find_it(li):
-  pass
+    table = {}
+
+    for i in li:
+      if i in table:
+        table[i] += 1
+      else:
+        table[i] = 1
+    
+    for i in table:
+      if table[i] % 2 != 0:
+        print(i)
+
+find_it([10])

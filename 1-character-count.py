@@ -29,4 +29,15 @@ the character d occurs 1 times
 '''
 
 def character_count(string):
-  pass
+    table = {}
+
+    for i in string:
+      if i in table:
+        table[i] += 1
+      else:
+        table[i] = 1
+    
+    for i in table:
+      print(f'The character {i} occurs {table[i]} times')
+
+character_count('hello world')
