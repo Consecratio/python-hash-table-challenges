@@ -30,7 +30,7 @@ def two_sum(nums, target):
 
     for idx,i in enumerate(nums):
       if i in table:
-        return table[i], idx
+        return [table[i], idx]
       else:
         table[target - i] = idx
 
